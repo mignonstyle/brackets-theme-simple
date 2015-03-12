@@ -1,0 +1,153 @@
+// Simple Brackets Theme
+// The MIT License (MIT)
+// Copyright (c) 2015 Mignon Style
+// https://github.com/mignonstyle/brackets-theme-simple
+
+
+/* Define some variables used in multiple places */
+
+@background: #fefefe;
+@foreground: #0033cc;
+
+@comment:    #d2691e;
+
+@lemon:      #ffff62;
+@yellowC:    #ffd700;
+@apricot:    #f6a644;
+@orangeC:    #ff4500;
+@carrot:     #ff6600;
+@brownC:     #d2691e;
+@redC:       #dc322f;
+@pinkC:      #ff1493;
+@purpleC:    #b77fdb;
+@blueC:      #6c71c4;
+@greenC:     #006400;
+@aquaC:      #afeeee;
+@skyblueC:   #e0ffff;
+@white:      #fff;
+@ltgrey:     #cfcfcf;
+@greyC:      #767676;
+@dkgrey:     #2f2f2f;
+@black:      #000;
+
+
+/* Code Styling */
+
+.CodeMirror, .CodeMirror-scroll {
+  background-color: @background;
+  color: @foreground;
+}
+
+.CodeMirror-focused .CodeMirror-activeline-background {
+  background: @skyblueC;
+}
+
+.show-line-padding .CodeMirror-focused .CodeMirror-activeline-background {
+  box-shadow: inset 15px 0 0 0 @black;
+}
+
+.CodeMirror-focused .CodeMirror-activeline {
+  .CodeMirror-gutter-elt {
+    background: rgba(0, 0, 0, 0.2);
+    color: @white;
+  }
+  .inline-widget .CodeMirror-gutter-elt {
+    color: @greyC;
+  }
+}
+
+.cm-atom, .cm-string, .cm-string-2, .cm-hr {color: @greenC;}
+.cm-number, .cm-attribute, .cm-plus {color: @orangeC;}
+.cm-def, .cm-property {color: @pinkC;}
+.cm-variable, .cm-variable-2, .cm-variable-3, .cm-operator, .cm-meta, .cm-bracket {color: @foreground;}
+.cm-comment {color: @comment;}
+.cm-error, .cm-minus {color: @redC;}
+.cm-header {color: @carrot;}
+.cm-link {color: @purpleC; text-decoration: none;}
+.cm-rangeinfo {color: @blueC;}
+.cm-keyword, .cm-qualifier, .cm-builtin, .cm-tag, .cm-quote {color: @dkgrey;}
+
+
+/* Extra CSS */
+
+.CodeMirror-searching {
+  background-color: @yellowC;
+  &.searching-current-match {
+    background-color: @apricot;
+  }
+}
+
+.CodeMirror-cursor {
+  border-left: 1px solid @ltgrey !important;
+}
+
+.CodeMirror-gutters {
+  background-color: darken(@white, 2%);
+  border-right: none;
+}
+
+.CodeMirror-linenumber {
+  color: darken(@white, 25%);
+}
+
+.CodeMirror .CodeMirror-selected {
+  background: @lemon;
+}
+.CodeMirror-focused .CodeMirror-selected {
+  background: @skyblueC;
+}
+
+.CodeMirror-matchingbracket, .CodeMirror-matchingtag {
+  /* Ensure visibility against gray inline editor background */
+  background-color: @aquaC;
+  color: @foreground !important;
+}
+
+.CodeMirror-overwrite .CodeMirror-cursor {
+  border-left: none !important;
+  border-bottom: 1px solid @white;
+}
+
+/* CodeMirror */
+
+.CodeMirror {
+  .CodeMirror {
+    background: transparent;
+  }
+
+  .CodeMirror .CodeMirror-gutters {
+    background: transparent;
+    border-right: none;
+  }
+
+  .CodeMirror .CodeMirror-activeline-background {
+    background: transparent;
+  }
+
+  .CodeMirror .CodeMirror-activeline .CodeMirror-gutter-elt {
+    background: @black;
+    color: @ltgrey;
+  }
+
+  .CodeMirror-focused .CodeMirror-activeline-background {
+    background: @dkgrey;
+  }
+
+  .CodeMirror-focused .CodeMirror-activeline {
+    .CodeMirror-gutter-elt {
+      background: rgba(0, 0, 0, 0.2);
+      color: @white;
+    }
+  }
+}
+
+/* Non-editor styling */
+
+.image-view,
+.not-editor {
+  background-color: @background;
+}
+
+.view-pane .image-view {
+  color: @foreground;
+}

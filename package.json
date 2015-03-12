@@ -1,0 +1,14 @@
+{
+  "name": "mignonstyle.simple",
+  "title": "Simple Theme",
+  "description": "Simple Light theme for Brackets.",
+  "homepage": "https://github.com/mignonstyle/brackets-theme-simple",
+  "version": "1.0.0",
+  "author": "Mignon Style (https://github.com/mignonstyle)",
+  "license": "MIT",
+  "theme": {
+    "file": "theme.less",
+    "dark": false
+  },
+  "keywords": ["theme", "light", "simple"]
+}
