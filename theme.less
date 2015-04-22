@@ -3,151 +3,170 @@
 // Copyright (c) 2015 Mignon Style
 // https://github.com/mignonstyle/brackets-theme-simple
 
-
 /* Define some variables used in multiple places */
 
 @background: #fefefe;
-@foreground: #0033cc;
-
-@comment:    #d2691e;
-
-@lemon:      #ffff62;
-@yellowC:    #ffd700;
-@apricot:    #f6a644;
-@orangeC:    #ff4500;
-@carrot:     #ff6600;
-@brownC:     #d2691e;
-@redC:       #dc322f;
-@pinkC:      #ff1493;
-@purpleC:    #b77fdb;
-@blueC:      #6c71c4;
-@greenC:     #006400;
-@aquaC:      #afeeee;
-@skyblueC:   #e0ffff;
-@white:      #fff;
-@ltgrey:     #cfcfcf;
-@greyC:      #767676;
-@dkgrey:     #2f2f2f;
-@black:      #000;
-
+@foreground: #212121;
 
 /* Code Styling */
+.CodeMirror {
+	line-height: 1.5;
+}
 
 .CodeMirror, .CodeMirror-scroll {
-  background-color: @background;
-  color: @foreground;
+	background-color: @background;
+	color: @foreground;
 }
 
 .CodeMirror-focused .CodeMirror-activeline-background {
-  background: @skyblueC;
+	background: #e0ffff;
 }
 
 .show-line-padding .CodeMirror-focused .CodeMirror-activeline-background {
-  box-shadow: inset 15px 0 0 0 @black;
+	box-shadow: inset 15px 0 0 0 #000;
 }
 
 .CodeMirror-focused .CodeMirror-activeline {
-  .CodeMirror-gutter-elt {
-    background: rgba(0, 0, 0, 0.2);
-    color: @white;
-  }
-  .inline-widget .CodeMirror-gutter-elt {
-    color: @greyC;
-  }
+	.CodeMirror-gutter-elt {
+		background: rgba(0, 0, 0, 0.2);
+		color: #fff;
+	}
+	.inline-widget .CodeMirror-gutter-elt {
+		color: #767676;
+	}
 }
 
-.cm-atom, .cm-string, .cm-string-2, .cm-hr {color: @greenC;}
-.cm-number, .cm-attribute, .cm-plus {color: @orangeC;}
-.cm-def, .cm-property {color: @pinkC;}
-.cm-variable, .cm-variable-2, .cm-variable-3, .cm-operator, .cm-meta, .cm-bracket {color: @foreground;}
-.cm-comment {color: @comment;}
-.cm-error, .cm-minus {color: @redC;}
-.cm-header {color: @carrot;}
-.cm-link {color: @purpleC; text-decoration: none;}
-.cm-rangeinfo {color: @blueC;}
-.cm-keyword, .cm-qualifier, .cm-builtin, .cm-tag, .cm-quote {color: @dkgrey;}
+// Comments
+.cm-comment {color: #d2691e;}
 
+// Function names and property values and Quotes
+.cm-atom,
+.cm-string,
+.cm-string-2,
+.cm-hr {color: #006400;}
+
+// Numbers
+.cm-number {color: #ff0000}
+
+// HTML attributes (id, class)
+.cm-attribute,
+.cm-plus {color: #ff4500;}
+
+// @include and CSS Properties
+.cm-def,
+.cm-property {color: #ff1493;}
+
+// Functions and variables and pseudo class of CSS
+.cm-variable,
+.cm-variable-2,
+.cm-variable-3 {color: #0070b5;}
+
+// operator and meta
+// 1.operator of JavaScript
+// 2.PHP start tag (meta)
+// 3.Document Type Definition (bracket)
+.cm-operator,
+.cm-meta,
+.cm-bracket {color: @foreground;}
+
+.cm-error, .cm-minus {color: #dc322f;}
+.cm-header {color: #ff6600;}
+.cm-link {color: #b77fdb; text-decoration: none;}
+.cm-rangeinfo {color: #6c71c4;}
+
+.cm-keyword {color: #0033cc;}
+.cm-tag {color: #0033cc}
+
+.cm-builtin {color: #009dff}
+.cm-quote {color: #009dff}
+
+// CSS selector
+.cm-qualifier {color: #2f2f2f;}
 
 /* Extra CSS */
-
 .CodeMirror-searching {
-  background-color: @yellowC;
-  &.searching-current-match {
-    background-color: @apricot;
-  }
+	background-color: #ffd700;
+		&.searching-current-match {
+		background-color: #f6a644;
+	}
 }
 
+// Cursor
 .CodeMirror-cursor {
-  border-left: 1px solid @ltgrey !important;
+	border-left: 1px solid #cfcfcf !important;
 }
 
+// Gutter
 .CodeMirror-gutters {
-  background-color: darken(@white, 2%);
-  border-right: none;
+	background-color: darken(#fff, 2%);
+	border-right: none;
 }
 
+// Gutter line number
 .CodeMirror-linenumber {
-  color: darken(@white, 25%);
+	color: darken(#fff, 25%);
 }
 
+// Selected text
 .CodeMirror .CodeMirror-selected {
-  background: @lemon;
-}
-.CodeMirror-focused .CodeMirror-selected {
-  background: @skyblueC;
+	background: #ffff62;
 }
 
-.CodeMirror-matchingbracket, .CodeMirror-matchingtag {
-  /* Ensure visibility against gray inline editor background */
-  background-color: @aquaC;
-  color: @foreground !important;
+.CodeMirror-focused .CodeMirror-selected {
+	background: #e0ffff;
+}
+
+// Matching selected
+.CodeMirror-matchingbracket,
+.CodeMirror-matchingtag {
+	background-color: #afeeee;
+	color: @foreground !important;
 }
 
 .CodeMirror-overwrite .CodeMirror-cursor {
-  border-left: none !important;
-  border-bottom: 1px solid @white;
+	border-left: none !important;
+	border-bottom: 1px solid #fff;
 }
 
 /* CodeMirror */
-
 .CodeMirror {
-  .CodeMirror {
-    background: transparent;
-  }
+	.CodeMirror {
+		background: transparent;
+	}
 
-  .CodeMirror .CodeMirror-gutters {
-    background: transparent;
-    border-right: none;
-  }
+	.CodeMirror .CodeMirror-gutters {
+		background: transparent;
+		border-right: none;
+	}
 
-  .CodeMirror .CodeMirror-activeline-background {
-    background: transparent;
-  }
+	.CodeMirror .CodeMirror-activeline-background {
+		background: transparent;
+	}
 
-  .CodeMirror .CodeMirror-activeline .CodeMirror-gutter-elt {
-    background: @black;
-    color: @ltgrey;
-  }
+	.CodeMirror .CodeMirror-activeline .CodeMirror-gutter-elt {
+		background: #000;
+		color: #cfcfcf;
+	}
 
-  .CodeMirror-focused .CodeMirror-activeline-background {
-    background: @dkgrey;
-  }
+	.CodeMirror-focused .CodeMirror-activeline-background {
+		background: #2f2f2f;
+	}
 
-  .CodeMirror-focused .CodeMirror-activeline {
-    .CodeMirror-gutter-elt {
-      background: rgba(0, 0, 0, 0.2);
-      color: @white;
-    }
-  }
+	// Gutter active line
+	.CodeMirror-focused .CodeMirror-activeline {
+		.CodeMirror-gutter-elt {
+			background: rgba(0, 0, 0, 0.2);
+			color: #fff;
+		}
+	}
 }
 
 /* Non-editor styling */
-
 .image-view,
 .not-editor {
-  background-color: @background;
+	background-color: @background;
 }
 
 .view-pane .image-view {
-  color: @foreground;
+	color: @foreground;
 }

@@ -3,12 +3,18 @@
   "title": "Simple Theme",
   "description": "Simple Light theme for Brackets.",
   "homepage": "https://github.com/mignonstyle/brackets-theme-simple",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Mignon Style (https://github.com/mignonstyle)",
   "license": "MIT",
   "theme": {
-    "file": "theme.less",
-    "dark": false
+   "file": "theme.less",
+  "dark": false
   },
-  "keywords": ["theme", "light", "simple"]
+  "keywords": ["theme", "light", "simple"],
+  "i18n": ["en", "ja"],
+  "package-i18n": {
+      "ja": {
+       "description": "Bracketsのための、白をベースとしたシンプルなライトカラーのテーマです。"
+     }
+  }
 }

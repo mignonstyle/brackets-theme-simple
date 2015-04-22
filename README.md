@@ -13,5 +13,9 @@ Simple Light theme for [Brackets](http://brackets.io/).
 ## PHP
 ![PHP Screenshot](preview/php.png)
 
+## Changelog
+Ver 1.1.0 Change the color of the variables etc.
+Ver 1.0.0 Initial release.
+
 ## Copyright and License
 Copyright (c) 2015 [Mignon Style](http://mignonstyle.com/). Released under the [MIT License](LICENSE).
